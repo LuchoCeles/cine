@@ -1,0 +1,8 @@
+.container{
+    text-align: center;
+    white-space: nowrap;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
