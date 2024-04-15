@@ -4,7 +4,20 @@ const app = () =>{
     const $inicio = document.getElementById("id-inicio");
     const $cartelera = document.getElementById("id-cartelera");
     const $combos = document.getElementById("id-combos");
+    const $btnInicio = document.getElementById("id-btnInicio");
+    const $btnCartelera = document.getElementById("id-btnCartelera");
+    const $btnCombos = document.getElementById("id-btnCombos");
     
+    const CrearBtn = (id) => {
+        let $btn = document.createElement("button");
+        $btn.setAttribute("id",id);
+        return $btn;
+    }
+
+    $div.appendChild(CrearBtn("id-btnInicio"));
+    $div.appendChild(CrearBtn("id-btnCartelera"));
+    $div.appendChild(CrearBtn("id-btnCombos"));
+
     const CrearA = (id,href,text) =>{
         let $a = document.createElement("a");
         $a.setAttribute("id",id);
@@ -38,6 +51,10 @@ const app = () =>{
                 break;
         }
     }
+
+    $btnInicio.addEventListener("click", () => { NavElements ("id-inicio"); });
+    $btnCartelera.addEventListener("click", () => { NavElements ("id-cartelera"); });
+    $btnCombos.addEventListener("click", () => { NavElements ("id-combos"); });
 }
 
 export default app;
