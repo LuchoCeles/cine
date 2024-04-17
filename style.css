@@ -1,0 +1,20 @@
+.container {
+    text-align: center;
+    white-space: nowrap;
+}
+
+#div-main {
+    display: flex;
+    /*Con esto se alinean*/
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-right: 10px;
+}
