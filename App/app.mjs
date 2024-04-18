@@ -1,6 +1,6 @@
 const app = () => {
 
-    const $div = document.getElementById("div-main");
+    const $nav = document.getElementById("nav-main");
     const $inicio = document.getElementById("id-inicio");
     const $cartelera = document.getElementById("id-cartelera");
     const $combos = document.getElementById("id-combos");
@@ -21,9 +21,9 @@ const app = () => {
         return $ul;
     }
 
-    $div.appendChild(CrearList(CrearA("id-inicio", "#inicio", "INICIO")));
-    $div.appendChild(CrearList(CrearA("id-cartelera", "#cartelera", "CARTELERA")));
-    $div.appendChild(CrearList(CrearA("id-combos", "#combos", "COMBOS")));
+    $nav.appendChild(CrearList(CrearA("id-inicio", "#inicio", "INICIO")));
+    $nav.appendChild(CrearList(CrearA("id-cartelera", "#cartelera", "CARTELERA")));
+    $nav.appendChild(CrearList(CrearA("id-combos", "#combos", "COMBOS")));
 
     const NavElements = (id) => {
         switch (id) {
