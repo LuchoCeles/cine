@@ -1,7 +1,9 @@
 const app = () => {
 
     const $nav = document.getElementById("nav-main");
+    const $secInicio = document.getElementById("sec-inicio");
     const $secCartelera = document.getElementById("sec-cartelera");
+    const $secCombo = document.getElementById("sec-combo");
 
     const CrearA = (id, href, text) => {
         let $a = document.createElement("a");
@@ -28,19 +30,19 @@ const app = () => {
     const $combos = document.getElementById("id-combos");
 
     const Inicio = () => {
-        $inicio.style.display = "block";
-        $cartelera.style.display = "none";
-        $combos.style.display = "none";
+        $secInicio.style.display = "block";
+        $secCartelera.style.display = "none";
+        $secCombo.style.display = "none";
     }
     const Cartelera = () => {
-        $inicio.style.display = "none";
-        $cartelera.style.display = "block";
-        $combos.style.display = "none";
+        $secInicio.style.display = "none";
+        $secCartelera.style.display = "block";
+        $secCombo.style.display = "none";
     }
     const Combos = () => {
-        $inicio.style.display = "none";
-        $cartelera.style.display = "none";
-        $combos.style.display = "block";
+        $secInicio.style.display = "none";
+        $secCartelera.style.display = "none";
+        $secCombo.style.display = "block";
     }
 
     $inicio.addEventListener("click", () => {
@@ -53,11 +55,38 @@ const app = () => {
         Combos();
     });
 
-    ///////////////////////////////CARRUSEL/////////////////////////////
+    ////////////////////////////////////////////////////////////
+
     let $a = document.createElement("a");
     $a.classList.add("page");
-    $secCartelera.appendChild(a);
-    const $imagenes = document.querySelectorAll(".page");
+    $secCartelera.appendChild($a);
+
+    let $btnA = document.createElement("button");
+    let $btnS = document.createElement("button");
+    $btnA.addEventListener("click", () => {
+        Carrusel(siguienteImagen());
+    });
+    $btnS.addEventListener("click", () => {
+        Carrusel(imagenAnterior());
+    });
+    $a.appendChild($btnA);
+    $a.appendChild($btnS);
+
+    let $imgId1 = document.createElement("img");
+    $imgId1.setAttribute("id", "id-img-1");
+    $imgId1.setAttribute("src", "./img_peliculas/img_1/kong_1.jpg");
+    $a.appendChild($imgId1);
+    let $imgId2 = document.createElement("img");
+    $imgId2.setAttribute("id", "id-img-2");
+    $imgId2.setAttribute("src", "./img_peliculas/img_1/michi_1.jpg");
+    $a.appendChild($imgId2);
+    let $imgId3 = document.createElement("img");
+    $imgId3.setAttribute("id", "id-img-2");
+    $imgId3.setAttribute("src", "./img_peliculas/img_1/panda_1.jpg");
+    $a.appendChild($imgId3);
+
+    ///////////////////////////////CARRUSEL/////////////////////////////
+    const $imagenes = document.querySelectorAll(".img");
     const mostrarImagen = (i) => {
         for (var i = 0; i < $imagenes.length; i++) { //bucle para ocultar imagenes
             $imagenes[i].style.display = 'none';
@@ -78,21 +107,6 @@ const app = () => {
         setInterval(a, 3000);
     }
     ////////////////////////////////////////////////////////////
-
-    let $btnA = document.createElement("button");
-    let $btnS = document.createElement("button");
-    $btnA.addEventListener("click", () => {
-        Carrusel(siguienteImagen());
-    });
-    $btnS.addEventListener("click", () => {
-        Carrusel(imagenAnterior());
-    });
-
-    const $imgId1 = document.getElementById("id-img-1");
-    $imgId1.setAttribute("id", "id-img-1");
-    $imgId1.setAttribute("src", "./img_peliculas/img_1");
-    $a.appendChild($imgId1);
-    
 }
 
 export default app;
