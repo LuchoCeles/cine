@@ -1,9 +1,8 @@
-const cateleraApp = () => {
+const carteleraApp = () => {
     const $cartelera = document.getElementById("id-cartelera");
     const $secInicio = document.getElementById("sec-inicio");
     const $secCartelera = document.getElementById("sec-cartelera");
     const $secCombo = document.getElementById("sec-combo");
-    const $imagenes = document.querySelectorAll(".img");
 
     $cartelera.addEventListener("click", () => {
         $secInicio.style.display = "none";
@@ -12,41 +11,35 @@ const cateleraApp = () => {
     });
 
     let $divMain = document.createElement("div");
-    let $aImg = document.createElement("a");
-    $aImg.classList.add("contenedorImagen");
+    let $divImg = document.createElement("div");
+    $divImg.classList.add("contenedorImagenCartelera");
+
     $divMain.classList.add("page");
     $secCartelera.appendChild($divMain);
-    $secCartelera.appendChild($aImg);
+    $secCartelera.appendChild($divImg);
 
     let $btnA = document.createElement("button");
     let $btnS = document.createElement("button");
-
-    $divMain.appendChild($btnA);
-    $divMain.appendChild($btnS);
+    $btnA.classList.add("btnA");
+    $btnS.classList.add("btnS");
+    $divImg.appendChild($btnA);
+    $divImg.appendChild($btnS);
 
     let $img = document.createElement("img");
-    $img.setAttribute("id", "id-img-1");
+    $img.classList.add("carousel-image");
     $img.setAttribute("src", "./img_peliculas/img_1/kong_1.jpg");
-    $aImg.appendChild($img);
-    let $img1 = document.createElement("img");
-    $img1.setAttribute("id", "id-img-2");
-    $img1.setAttribute("src", "./img_peliculas/img_1/michi_1.jpg");
-    $aImg.appendChild($img1);
-    let $img2 = document.createElement("img");
-    $img2.setAttribute("id", "id-img-3");
-    $img2.setAttribute("src", "./img_peliculas/img_1/panda_1.jpg");
-    $aImg.appendChild($img2);
+    $divImg.appendChild($img);
 
     let i = 0;
-
-    const mostrarImagen = (i) => {
-        $imagenes.forEach(($img, index) => {
-            if (index === i) {
-                $img.style.display = "block";
-            } else {
-                $img.style.display = "none";
-            }
-        });
+    const $imagenes = [
+        "./img_peliculas/img_1/kong_1.jpg",
+        "./img_peliculas/img_1/michi_1.jpg",
+        "./img_peliculas/img_1/panda_1.jpg"
+    ];
+    let internalId;
+    const $image = document.querySelector(".carousel-image");
+    const mostrarImagen = (index) => {
+        $image.src = $imagenes[index];
     };
 
     const siguienteImagen = () => {
@@ -59,19 +52,20 @@ const cateleraApp = () => {
         mostrarImagen(i);
     };
 
-    const Carrusel = (fun) => {
-        setInterval(fun, 3000);
-        mostrarImagen(i);
+    const resetIntervalo = () => {
+        clearInterval(internalId);
     };
 
     $btnA.addEventListener("click", () => {
         siguienteImagen();
+        resetIntervalo();
     });
     $btnS.addEventListener("click", () => {
         imagenAnterior();
+        resetIntervalo();
     });
 
-    Carrusel(siguienteImagen);
+    intervalId = setInterval(siguienteImagen, 3000);
 };
 
-export default cateleraApp;
+export default carteleraApp;
