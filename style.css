@@ -4,9 +4,8 @@
     white-space: nowrap;
 }
 
-#div-main {
+#nav-main {
     display: flex;
-    /*Con esto se alinean*/
     justify-content: center;
     align-items: center;
 }
@@ -21,4 +20,24 @@ ul {
 }
 ul li {
     margin-right: 10px;
+}
+/* Estilo para las imágenes */
+.img {
+    display: none; /* Ocultamos todas las imágenes por defecto */
+    max-width: 100%; /* Ancho máximo para asegurar que las imágenes no se extiendan más allá del contenedor */
+    height: auto; /* Permitimos que la altura de las imágenes se ajuste automáticamente */
+}
+.page {
+    display: flex; /* Utilizamos flexbox para alinear los elementos en línea */
+    justify-content: center; /* Centramos los elementos horizontalmente */
+    align-items: center; /* Centramos los elementos verticalmente */
+    margin-top: 20px; /* Espacio superior para separar del contenido superior */
+}
+
+button {
+    margin: 0 10px;
+    padding: 5px 10px;
+}
+.contenedorImagen{
+    overflow: hidden;
 }

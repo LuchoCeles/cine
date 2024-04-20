@@ -1,6 +1,6 @@
 const $DOM = document;
-import app from "./app/app.mjs";
+import appFunc from "./app/app.mjs";
 
 $DOM.addEventListener("DOMContentLoaded", () => {
-    app();
+    appFunc();
 });
