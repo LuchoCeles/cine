@@ -1,61 +1,16 @@
-const app = () => {
+import navApp from "./componentes/nav.mjs";
+import inicioApp from "./componentes/seccionInicio.mjs";
+import combosApp from "./componentes/seccionCombos.mjs";
+import cateleraApp from "./componentes/seccionCartelera.mjs";
+navApp();
+inicioApp();
+combosApp();
+cateleraApp();
 
-    const $nav = document.getElementById("nav-main");
+const appFunc = () => {
     const $secInicio = document.getElementById("sec-inicio");
     const $secCartelera = document.getElementById("sec-cartelera");
     const $secCombo = document.getElementById("sec-combo");
-
-    const CrearA = (id, href, text) => {
-        let $a = document.createElement("a");
-        $a.setAttribute("id", id);
-        $a.href = href;
-        $a.text = text;
-        return $a;
-    }
-
-    const CrearList = (a) => {
-        let $ul = document.createElement("ul");
-        let $li = document.createElement("li");
-        $li.appendChild(a);
-        $ul.appendChild($li);
-        return $ul;
-    }
-
-    $nav.appendChild(CrearList(CrearA("id-inicio", "#inicio", "INICIO")));
-    $nav.appendChild(CrearList(CrearA("id-cartelera", "#cartelera", "CARTELERA")));
-    $nav.appendChild(CrearList(CrearA("id-combos", "#combos", "COMBOS")));
-
-    const $inicio = document.getElementById("id-inicio");
-    const $cartelera = document.getElementById("id-cartelera");
-    const $combos = document.getElementById("id-combos");
-
-    const Inicio = () => {
-        $secInicio.style.display = "block";
-        $secCartelera.style.display = "none";
-        $secCombo.style.display = "none";
-    }
-    const Cartelera = () => {
-        $secInicio.style.display = "none";
-        $secCartelera.style.display = "block";
-        $secCombo.style.display = "none";
-    }
-    const Combos = () => {
-        $secInicio.style.display = "none";
-        $secCartelera.style.display = "none";
-        $secCombo.style.display = "block";
-    }
-
-    $inicio.addEventListener("click", () => {
-        Inicio();
-    });
-    $cartelera.addEventListener("click", () => {
-        Cartelera();
-    });
-    $combos.addEventListener("click", () => {
-        Combos();
-    });
-
-    ////////////////////////////////////////////////////////////
 
     let $a = document.createElement("a");
     $a.classList.add("page");
@@ -108,5 +63,5 @@ const app = () => {
     }
     ////////////////////////////////////////////////////////////
 }
-
+appFunc();
 export default app;

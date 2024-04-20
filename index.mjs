@@ -1,5 +1,5 @@
 const $DOM = document;
-import app from "./App/app.mjs";
+import app from "./app/app.mjs";
 
 $DOM.addEventListener("DOMContentLoaded", () => {
     app();
