@@ -22,6 +22,8 @@ const carteleraApp = () => {
     let $btnS = document.createElement("button");
     $btnA.classList.add("btnA");
     $btnS.classList.add("btnS");
+    $btnA.textContent = "<";
+    $btnS.textContent = ">";
     $divImg.appendChild($btnA);
     $divImg.appendChild($btnS);
 
@@ -36,7 +38,7 @@ const carteleraApp = () => {
         "./img_peliculas/img_1/michi_1.jpg",
         "./img_peliculas/img_1/panda_1.jpg"
     ];
-    let internalId;
+
     const $image = document.querySelector(".carousel-image");
     const mostrarImagen = (index) => {
         $image.src = $imagenes[index];
@@ -52,20 +54,14 @@ const carteleraApp = () => {
         mostrarImagen(i);
     };
 
-    const resetIntervalo = () => {
-        clearInterval(internalId);
-    };
-
     $btnA.addEventListener("click", () => {
         siguienteImagen();
-        resetIntervalo();
     });
     $btnS.addEventListener("click", () => {
         imagenAnterior();
-        resetIntervalo();
     });
 
-    intervalId = setInterval(siguienteImagen, 3000);
+    setInterval(siguienteImagen, 3000);
 };
 
 export default carteleraApp;

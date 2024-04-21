@@ -21,5 +21,6 @@ const navApp = () => {
     $nav.appendChild(CrearList(CrearA("id-cartelera", "#cartelera", "CARTELERA")));
     $nav.appendChild(CrearList(CrearA("id-combos", "#combos", "COMBOS")));
     
+
 }
 export default navApp;

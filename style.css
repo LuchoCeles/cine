@@ -40,23 +40,24 @@ ul li {
 }
 .btnA,.btnS {
     background-color: rgba(255, 255, 255, 0.197);
-    color: rgb(0, 0, 0);
+    color: rgb(218, 216, 216);
     height: 100%; /* El botón ocupa toda la altura del contenedor */
     width: 3.5vw; /* Ancho deseado para los botones */
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 1;
-    border-radius: 20px; /* Aplicamos el redondeo al contenedor padre */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     user-select: none;
 }
 .btnA {
-    left: 0; /* Botón izquierdo */
+    left: 0;
 }
-
 .btnS {
-    right: 0; /* Botón derecho */
+    right: 0;
+}
+.btnA:hover, .btnS:hover {/*Se ilumina el lado cuando pasas encima*/
+    background-color: rgba(255, 255, 255, 0.5); /* Cambiar el valor de transparencia según lo que desees */
 }
