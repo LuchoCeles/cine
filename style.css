@@ -31,7 +31,7 @@ ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80vw; /* Ancho de 40vw */
+    width: 100%; 
     min-width: 480px; /* Mínimo ancho de 300px */
     height: auto;
     aspect-ratio: 16/9;
