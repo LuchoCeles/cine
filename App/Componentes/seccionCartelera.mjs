@@ -1,3 +1,4 @@
+import { CrearImg, CrearLi } from "./funciones.mjs";
 const carteleraApp = () => {
     const $cartelera = document.getElementById("id-cartelera");
     const $secInicio = document.getElementById("sec-inicio");
@@ -16,7 +17,7 @@ const carteleraApp = () => {
 
     $divMain.classList.add("page");
     $secCartelera.appendChild($divMain);
-    $secCartelera.appendChild($divImg);
+    $divMain.appendChild($divImg);
 
     let $btnA = document.createElement("button");
     let $btnS = document.createElement("button");
@@ -27,10 +28,8 @@ const carteleraApp = () => {
     $divImg.appendChild($btnA);
     $divImg.appendChild($btnS);
 
-    let $img = document.createElement("img");
-    $img.classList.add("carousel-image");
-    $img.setAttribute("src", "./img_peliculas/img_1/kong_1.jpg");
-    $divImg.appendChild($img);
+
+    $divImg.appendChild(CrearImg("carousel-image", "./img_peliculas/img_1/kong_1.jpg"));
 
     let i = 0;
     const $imagenes = [
@@ -62,6 +61,16 @@ const carteleraApp = () => {
     });
 
     setInterval(siguienteImagen, 3000);
+
+    let $divPoster = document.createElement("div");
+    $divPoster.classList.add("ContenidoPoster");
+    $divMain.appendChild($divPoster);
+    let $contenido = document.createElement("p");
+    $contenido.textContent = "Cartelera";
+    $divPoster.appendChild($contenido);
+    $divPoster.appendChild(CrearImg("img_Poster1", "./img_peliculas/img_2/kong_2.jpg"));
+    $divPoster.appendChild(CrearImg("img_Poster2", "./img_peliculas/img_2/michi_2.jpg"));
+    $divPoster.appendChild(CrearImg("img_Poster3", "./img_peliculas/img_2/panda_2.jpg"));
 };
 
 export default carteleraApp;
