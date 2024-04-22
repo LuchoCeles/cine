@@ -1,7 +1,11 @@
 .container {
-    background-color: black;
+    background-color: rgb(42,26,29);
     text-align: center;
     white-space: nowrap;
+    max-height: 100px;
+}
+.LogoNav{
+    max-height: 100px;
 }
 #nav-main {
     display: flex;
