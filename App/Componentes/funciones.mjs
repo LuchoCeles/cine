@@ -5,9 +5,10 @@ export const CrearImg = (nombreclase, src) => {
     return $img
 }
 
-export const CrearLi = () => {
-    $li = document.createElement("li");
-    return $li;
+export const CrearDiv = (cont) => {
+    let $contenido = document.createElement("div");
+    $contenido.textContent = cont;
+    return $contenido;
 }
 
 export const CrearA = (id, href, text) => {

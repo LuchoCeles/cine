@@ -60,3 +60,13 @@ ul li {
 .btnA:hover, .btnS:hover {/*Se ilumina el lado cuando pasas encima*/
     background-color: rgba(255, 255, 255, 0.5); /* Cambiar el valor de transparencia según lo que desees */
 }
+#GaleriaPoster {
+    display: flex;
+    justify-content: flex-start; /* Esto alinea los elementos al inicio */
+    list-style-type: none; /* Esto quita los puntos de la lista */
+    padding: 0; /* Esto quita el padding por defecto de la lista */
+}
+
+#GaleriaPoster li {
+    margin-right: 10px; /* Esto añade un margen a la derecha de cada elemento li */
+}
