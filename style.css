@@ -34,7 +34,6 @@ ul li {
     width: 100%; 
     min-width: 480px; /* Mínimo ancho de 300px */
     height: auto;
-    aspect-ratio: 16/9;
     position: relative; /* Agregamos posición relativa al contenedor */
     overflow: hidden; /* Recortar cualquier parte de la imagen que sobresalga del contenedor */
 }
