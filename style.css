@@ -1,20 +1,71 @@
 .container {
+    background-color: rgb(42,26,29);
     text-align: center;
     white-space: nowrap;
+    max-height: 100px;
 }
-
-#div-main {
+.LogoNav{
+    max-height: 100px;
+}
+#nav-main {
     display: flex;
-    /*Con esto se alinean*/
     justify-content: center;
     align-items: center;
 }
-
 ul {
     list-style-type: none;
     padding: 0;
 }
-
 ul li {
     margin-right: 10px;
 }
+#id-inicio,#id-combos,#id-cartelera,b,h2{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background-color: black;
+}
+.carousel-image {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+}
+.contenedorImagenCartelera{
+    margin-left: auto;
+    margin-right: auto;/*con left y right centro el div*/
+    width: 70%; 
+    position: relative; /* Agregamos posición relativa al contenedor */
+    margin-top: 30px;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+.btnA,.btnS {
+    background-color: transparent;
+    color: rgb(218, 216, 216);
+    height: 99%; /* El botón ocupa toda la altura del contenedor */
+    width: 50px; /* Ancho deseado para los botones */
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+.btnA {
+    left: 0;
+}
+.btnS {
+    right: 0;
+}
+.btnA:hover, .btnS:hover {/*Se ilumina el lado cuando pasas encima*/
+    background-color: rgba(255, 255, 255, 0.197); /* Cambiar el valor de transparencia según lo que desees */
+}
+#GaleriaPoster {
+    display: flex;
+    justify-content: flex-start; /* Esto alinea los elementos al inicio */
+    list-style-type: none; /* Esto quita los puntos de la lista */
+    padding: 0; /* Esto quita el padding por defecto de la lista */
+}
+
+#GaleriaPoster li {
+    margin-right: 10px; /* Esto añade un margen a la derecha de cada elemento li */
+    color: white;
+}
+
+
