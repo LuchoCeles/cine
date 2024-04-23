@@ -1,67 +1,19 @@
-import { CrearImg, CrearDiv } from "./funciones.mjs";
+import { CrearImg, CrearDiv, } from "./funciones.mjs";
+import { Carrusel } from "./cargaInicio.mjs";
 const inicioApp = () => {
     const $inicio = document.getElementById("id-inicio");
     const $secInicio = document.getElementById("sec-inicio");
     const $secCartelera = document.getElementById("sec-cartelera");
     const $secCombo = document.getElementById("sec-combo");
+    const $divMain = document.getElementById("page-ini");
 
     $inicio.addEventListener("click", () => {
         $secInicio.style.display = "block";
         $secCartelera.style.display = "none";
         $secCombo.style.display = "none";
     });
-
-    let $divMain = document.createElement("div");
-    let $divImg = document.createElement("div");
-    $divImg.classList.add("contenedorImagenCartelera");
-
-    $divMain.classList.add("page");
-    $secInicio.appendChild($divMain);
-    $divMain.appendChild($divImg);
-
-    let $btnA = document.createElement("button");
-    let $btnS = document.createElement("button");
-    $btnA.classList.add("btnA");
-    $btnS.classList.add("btnS");
-    $btnA.textContent = "<";
-    $btnS.textContent = ">";
-    $divImg.appendChild($btnA);
-    $divImg.appendChild($btnS);
-
-
-    $divImg.appendChild(CrearImg("carousel-image", "./img_peliculas/img_1/kong_1.jpg"));
-
-    const $image = document.querySelector(".carousel-image");
     
-    let i = 0;
-    const $imagenes = [
-        "./img_peliculas/img_1/kong_1.jpg",
-        "./img_peliculas/img_1/michi_1.jpg",
-        "./img_peliculas/img_1/panda_1.jpg"
-    ];
-    
-    const mostrarImagen = (index) => {
-        $image.src = $imagenes[index];
-    };
-
-    const siguienteImagen = () => {
-        i = (i + 1) % $imagenes.length;
-        mostrarImagen(i);
-    };
-
-    const imagenAnterior = () => {
-        i = (i - 1 + $imagenes.length) % $imagenes.length;
-        mostrarImagen(i);
-    };
-
-    $btnA.addEventListener("click", () => {
-        siguienteImagen();
-    });
-    $btnS.addEventListener("click", () => {
-        imagenAnterior();
-    });
-
-    setInterval(siguienteImagen, 3000);
+    Carrusel();
 
     let $divPoster = document.createElement("div");
     $divPoster.classList.add("ContenidoPoster");
