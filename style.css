@@ -12,48 +12,40 @@
     justify-content: center;
     align-items: center;
 }
-
 ul {
     list-style-type: none;
     padding: 0;
+}
+ul li {
+    margin-right: 10px;
 }
 #id-inicio,#id-combos,#id-cartelera {
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-ul li {
-    margin-right: 10px;
+body{
+    background-color: black;
 }
-
 .carousel-image {
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: auto; /* Ajusta la altura automáticamente para mantener el aspect ratio */
-    object-fit: cover; /* Cubre el contenedor con la imagen */
-    object-position: center; /* Centra la imagen dentro del contenedor */
 }
-.contenedorImagenCartelera{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; 
-    min-width: 480px; /* Mínimo ancho de 300px */
-    height: auto;
+.IniciocontenedorImagenCartelera{
+    margin-left: auto;
+    margin-right: auto;/*con left y right centro el div*/
+    width: 70%; 
     position: relative; /* Agregamos posición relativa al contenedor */
-    overflow: hidden; /* Recortar cualquier parte de la imagen que sobresalga del contenedor */
+    margin-top: 30px;
+    padding-top: 0%;
+    padding-bottom: 0%;
 }
 .btnA,.btnS {
-    background-color: rgba(255, 255, 255, 0.197);
+    background-color: transparent;
     color: rgb(218, 216, 216);
-    height: 100%; /* El botón ocupa toda la altura del contenedor */
-    width: 3.5vw; /* Ancho deseado para los botones */
+    height: 99%; /* El botón ocupa toda la altura del contenedor */
+    width: 50px; /* Ancho deseado para los botones */
     border: none;
-    padding: 10px;
     cursor: pointer;
-    z-index: 1;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    user-select: none;
 }
 .btnA {
     left: 0;
@@ -62,7 +54,7 @@ ul li {
     right: 0;
 }
 .btnA:hover, .btnS:hover {/*Se ilumina el lado cuando pasas encima*/
-    background-color: rgba(255, 255, 255, 0.5); /* Cambiar el valor de transparencia según lo que desees */
+    background-color: rgba(255, 255, 255, 0.197); /* Cambiar el valor de transparencia según lo que desees */
 }
 #GaleriaPoster {
     display: flex;
@@ -73,4 +65,5 @@ ul li {
 
 #GaleriaPoster li {
     margin-right: 10px; /* Esto añade un margen a la derecha de cada elemento li */
+    color: white;
 }
