@@ -67,3 +67,7 @@ body{
     margin-right: 10px; /* Esto añade un margen a la derecha de cada elemento li */
     color: white;
 }
+
+h2{
+    color: aliceblue;
+}
