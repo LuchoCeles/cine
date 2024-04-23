@@ -75,9 +75,9 @@ const carteleraApp = () => {
     $li2.appendChild(CrearImg("img_Poster2", "./img_peliculas/img_2/michi_2.jpg"));
     $li3.appendChild(CrearImg("img_Poster3", "./img_peliculas/img_2/panda_2.jpg"));
 
-    $li1.appendChild(CrearDiv("Macaco - acción"));
-    $li2.appendChild(CrearDiv("Michi - animada"));
-    $li3.appendChild(CrearDiv("Luchito - animada"));
+    $li1.appendChild(CrearDiv("Macaco"));
+    $li2.appendChild(CrearDiv("Michi"));
+    $li3.appendChild(CrearDiv("Luchito"));
 
     let $ul = document.createElement("ul");
     $ul.setAttribute("id","GaleriaPoster");
