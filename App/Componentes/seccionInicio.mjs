@@ -13,7 +13,7 @@ const inicioApp = () => {
 
     let $divMain = document.createElement("div");
     let $divImg = document.createElement("div");
-    $divImg.classList.add("IniciocontenedorImagenCartelera");
+    $divImg.classList.add("contenedorImagenCartelera");
 
     $divMain.classList.add("page");
     $secInicio.appendChild($divMain);

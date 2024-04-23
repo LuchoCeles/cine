@@ -1,25 +1,25 @@
-import { CrearImg,CrearDiv } from "./funciones.mjs";
+import { CrearImg, CrearDiv } from "./funciones.mjs";
 const combosApp = () => {
     const $combos = document.getElementById("id-combos");
     const $secInicio = document.getElementById("sec-inicio");
     const $secCartelera = document.getElementById("sec-cartelera");
     const $secCombo = document.getElementById("sec-combo");
-    
+
     $combos.addEventListener("click", () => {
         $secInicio.style.display = "none";
         $secCartelera.style.display = "none";
         $secCombo.style.display = "block";
     });
-    
-   let $divContido = document.createElement("div");
-   let $divImg = document.createElement("div");
-   $divImg.classList.add("contenedorImagenCombos"); 
 
-   $divContido.classList.add("page");
-   $secCombo.appendChild($divContido);
-   $divContido.appendChild($divImg);
+    let $divContenido = document.createElement("div");
+    let $divImg = document.createElement("div");
+    $divImg.classList.add("contenedorImagenCartelera");
 
-   let $btnA = document.createElement("button");
+    $divContenido.classList.add("page");
+    $secCombo.appendChild($divContenido);
+    $divContenido.appendChild($divImg);
+
+    let $btnA = document.createElement("button");
     let $btnS = document.createElement("button");
     $btnA.classList.add("btnA");
     $btnS.classList.add("btnS");
@@ -30,7 +30,7 @@ const combosApp = () => {
 
     $divImg.appendChild(CrearImg("carousel-image", "./img_peliculas/img_1/kong_1.jpg"));
     let i = 0;
-    const $imagenes = [
+    const $imagenes = [ // No andan ni idea
         "./img_peliculas/img_1/kong_1.jpg",
         "./img_peliculas/img_1/michi_1.jpg",
         "./img_peliculas/img_1/panda_1.jpg"
@@ -64,111 +64,32 @@ const combosApp = () => {
     $hCombo.textContent = "Combos";
 
     $divCombos.appendChild($hCombo);
-    $divContido.appendChild($divCombos);
+    $divContenido.appendChild($divCombos);
 
-/* SE PUEDE OPTIMIZAR, PERO NO SE COMO, APENAS SE ME OCURRIO COMO HACER ESTA CEBOLLA*/
+    let $divCombosC = document.createElement("div");
+    $divContenido.appendChild($divCombosC);
 
-    let $divCombosC= document.createElement("div");
+    const CrearDivImg = (nombreClass,rutaImg,contenidoText) => {
+        let $divComb = document.createElement("div");
+        let $imgComb = CrearImg(nombreClass, rutaImg);
+        let $divtitle = document.createElement("div");
+        let $bComb = document.createElement("b");
+        $bComb.textContent = contenidoText;
+        $divtitle.appendChild($bComb);
+        $divComb.appendChild($divtitle);
+        $divComb.appendChild($imgComb);
+        return $divComb;
+    }
 
+    $divCombosC.appendChild(CrearDivImg("combo1","./img_combos/combo1.jpg","Combo 1"));
+    $divCombosC.appendChild(CrearDivImg("combo2","./img_combos/combo2.jpg","Combo 2"));
+    $divCombosC.appendChild(CrearDivImg("combo3","./img_combos/combo3.jpg","Combo 3"));
+    $divCombosC.appendChild(CrearDivImg("combo4","./img_combos/combo4.jpg","Combo 4"));
+    $divCombosC.appendChild(CrearDivImg("combo5","./img_combos/combo5.jpg","Combo 5"));
+    $divCombosC.appendChild(CrearDivImg("combo6","./img_combos/combo6.jpg","Combo 6"));
+    $divCombosC.appendChild(CrearDivImg("combo7","./img_combos/combo7.jpg","Combo 7"));
+    $divCombosC.appendChild(CrearDivImg("combo8","./img_combos/combo8.jpg","Combo 8"));
+    $divCombosC.appendChild(CrearDivImg("combo9","./img_combos/combo9.jpg","Combo 9"));
 
-    let $divComb1 = document.createElement("div");
-    let $imgComb1 = CrearImg("combo1","./img_combos/combo1.jpg");
-    let $divtitle1 = document.createElement("div");
-    let $bComb1 = document.createElement("b");
-    $bComb1.textContent = "Combo 1"
-    $divtitle1.appendChild($bComb1);
-    $divComb1.appendChild($divtitle1);
-    $divComb1.appendChild($imgComb1);
-    $divCombosC.appendChild($divComb1);
-
-    let $divComb2 = document.createElement("div");
-    let $imgComb2 = CrearImg("combo2","./img_combos/combo2.jpg");
-    let $divtitle2 = document.createElement("div");
-    let $bComb2 = document.createElement("b");
-    $bComb2.textContent = "Combo 2"
-    $divtitle2.appendChild($bComb2);
-    $divComb2.appendChild($divtitle2);
-    $divComb2.appendChild($imgComb2);
-    $divCombosC.appendChild($divComb2);
-    
-
-    let $divComb3 = document.createElement("div");
-    let $imgComb3 = CrearImg("combo3","./img_combos/combo3.jpg");
-    let $divtitle3 = document.createElement("div");
-    let $bComb3 = document.createElement("b");
-    $bComb3.textContent = "Combo 3"
-    $divtitle3.appendChild($bComb3);
-    $divComb3.appendChild($divtitle3);
-    $divComb3.appendChild($imgComb3);
-    $divCombosC.appendChild($divComb3);
-   
-
-    let $divComb4 = document.createElement("div");
-    let $imgComb4 = CrearImg("combo4","./img_combos/combo4.jpg");
-    let $divtitle4 = document.createElement("div");
-    let $bComb4 = document.createElement("b");
-    $bComb4.textContent = "Combo 4"
-    $divtitle4.appendChild($bComb4);
-    $divComb4.appendChild($divtitle4);
-    $divComb4.appendChild($imgComb4);
-    $divCombosC.appendChild($divComb4);
-    
-    
-    
-    let $divComb5 = document.createElement("div");
-    let $imgComb5 = CrearImg("combo5","./img_combos/combo5.jpg");
-    let $divtitle5 = document.createElement("div");
-    let $bComb5 = document.createElement("b");
-    $bComb5.textContent = "Combo 5"
-    $divtitle5.appendChild($bComb5);
-    $divComb5.appendChild($divtitle5);
-    $divComb5.appendChild($imgComb5);
-    $divCombosC.appendChild($divComb5);
-   
-
-    let $divComb6 = document.createElement("div");
-    let $imgComb6 = CrearImg("combo6","./img_combos/combo6.jpg");
-    let $divtitle6 = document.createElement("div");
-    let $bComb6 = document.createElement("b");
-    $bComb6.textContent = "Combo 6"
-    $divtitle6.appendChild($bComb6);
-    $divComb6.appendChild($divtitle6);
-    $divComb6.appendChild($imgComb6);
-    $divCombosC.appendChild($divComb6);
-   
-
-    let $divComb7 = document.createElement("div");
-    let $imgComb7 = CrearImg("combo7","./img_combos/combo7.jpg");
-    let $divtitle7 = document.createElement("div");
-    let $bComb7 = document.createElement("b");
-    $bComb7.textContent = "Combo 7"
-    $divtitle7.appendChild($bComb7);
-    $divComb7.appendChild($divtitle7);
-    $divComb7.appendChild($imgComb7);
-    $divCombosC.appendChild($divComb7);
-  
-
-    let $divComb8 = document.createElement("div");
-    let $imgComb8 = CrearImg("combo8","./img_combos/combo8.jpg");
-    let $divtitle8 = document.createElement("div");
-    let $bComb8 = document.createElement("b");
-    $bComb8.textContent = "Combo 8"
-    $divtitle8.appendChild($bComb8);
-    $divComb8.appendChild($divtitle8);
-    $divComb8.appendChild($imgComb8);
-    $divCombosC.appendChild($divComb8);
-
-
-    let $divComb9 = document.createElement("div");
-    let $imgComb9 = CrearImg("combo9","./img_combos/combo9.jpg");
-    let $divtitle9 = document.createElement("div");
-    let $bComb9 = document.createElement("b");
-    $bComb9.textContent = "Combo 9"
-    $divtitle9.appendChild($bComb9);
-    $divComb9.appendChild($divtitle9);
-    $divComb9.appendChild($imgComb9);
-    $divCombosC.appendChild($divComb9);
-    
-    $divContido.appendChild($divCombosC);
 }
 export default combosApp;
