@@ -76,7 +76,7 @@ const combosApp = () => {
     let $divtitle1 = document.createElement("div");
     let $bComb1 = document.createElement("b");
     $bComb1.textContent = "Combo 1"
-    $divComb1.appendChild($bComb1);
+    $divtitle1.appendChild($bComb1);
     $divComb1.appendChild($divtitle1);
     $divComb1.appendChild($imgComb1);
     $divCombosC.appendChild($divComb1);
@@ -86,7 +86,7 @@ const combosApp = () => {
     let $divtitle2 = document.createElement("div");
     let $bComb2 = document.createElement("b");
     $bComb2.textContent = "Combo 2"
-    $divComb2.appendChild($bComb2);
+    $divtitle2.appendChild($bComb2);
     $divComb2.appendChild($divtitle2);
     $divComb2.appendChild($imgComb2);
     $divCombosC.appendChild($divComb2);
@@ -97,7 +97,7 @@ const combosApp = () => {
     let $divtitle3 = document.createElement("div");
     let $bComb3 = document.createElement("b");
     $bComb3.textContent = "Combo 3"
-    $divComb3.appendChild($bComb3);
+    $divtitle3.appendChild($bComb3);
     $divComb3.appendChild($divtitle3);
     $divComb3.appendChild($imgComb3);
     $divCombosC.appendChild($divComb3);
@@ -108,7 +108,7 @@ const combosApp = () => {
     let $divtitle4 = document.createElement("div");
     let $bComb4 = document.createElement("b");
     $bComb4.textContent = "Combo 4"
-    $divComb4.appendChild($bComb4);
+    $divtitle4.appendChild($bComb4);
     $divComb4.appendChild($divtitle4);
     $divComb4.appendChild($imgComb4);
     $divCombosC.appendChild($divComb4);
@@ -120,7 +120,7 @@ const combosApp = () => {
     let $divtitle5 = document.createElement("div");
     let $bComb5 = document.createElement("b");
     $bComb5.textContent = "Combo 5"
-    $divComb5.appendChild($bComb5);
+    $divtitle5.appendChild($bComb5);
     $divComb5.appendChild($divtitle5);
     $divComb5.appendChild($imgComb5);
     $divCombosC.appendChild($divComb5);
@@ -131,7 +131,7 @@ const combosApp = () => {
     let $divtitle6 = document.createElement("div");
     let $bComb6 = document.createElement("b");
     $bComb6.textContent = "Combo 6"
-    $divComb6.appendChild($bComb6);
+    $divtitle6.appendChild($bComb6);
     $divComb6.appendChild($divtitle6);
     $divComb6.appendChild($imgComb6);
     $divCombosC.appendChild($divComb6);
@@ -142,7 +142,7 @@ const combosApp = () => {
     let $divtitle7 = document.createElement("div");
     let $bComb7 = document.createElement("b");
     $bComb7.textContent = "Combo 7"
-    $divComb7.appendChild($bComb7);
+    $divtitle7.appendChild($bComb7);
     $divComb7.appendChild($divtitle7);
     $divComb7.appendChild($imgComb7);
     $divCombosC.appendChild($divComb7);
@@ -153,7 +153,7 @@ const combosApp = () => {
     let $divtitle8 = document.createElement("div");
     let $bComb8 = document.createElement("b");
     $bComb8.textContent = "Combo 8"
-    $divComb8.appendChild($bComb8);
+    $divtitle8.appendChild($bComb8);
     $divComb8.appendChild($divtitle8);
     $divComb8.appendChild($imgComb8);
     $divCombosC.appendChild($divComb8);
@@ -164,7 +164,7 @@ const combosApp = () => {
     let $divtitle9 = document.createElement("div");
     let $bComb9 = document.createElement("b");
     $bComb9.textContent = "Combo 9"
-    $divComb9.appendChild($bComb9);
+    $divtitle9.appendChild($bComb9);
     $divComb9.appendChild($divtitle9);
     $divComb9.appendChild($imgComb9);
     $divCombosC.appendChild($divComb9);
