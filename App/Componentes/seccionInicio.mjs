@@ -12,65 +12,8 @@ const inicioApp = () => {
     });
 
     let $divMain = document.createElement("div");
-    let $divImg = document.createElement("div");
-    $divImg.classList.add("contenedorImagenCartelera");
-
-    $divMain.classList.add("page");
     $secInicio.appendChild($divMain);
-    $divMain.appendChild($divImg);
-
-    let $btnA = CrearBoton("btnA","<");
-    let $btnS = CrearBoton("btnS",">");
-
-    $divImg.appendChild($btnA);
-    $divImg.appendChild($btnS);
-
-
-    $divImg.appendChild(CrearImg("carousel-image", "./img_peliculas/img_1/kong_1.jpg"));
-
     
-    let i = 0;
-    const $imagenes = [
-        "./img_peliculas/img_1/kong_1.jpg",
-        "./img_peliculas/img_1/michi_1.jpg",
-        "./img_peliculas/img_1/panda_1.jpg"
-    ];
-    const $imagenescombos = [
-        "./img_combos/combo1.jpg",
-        "./img_combos/combo2.jpg",
-        "./img_combos/combo3.jpg",
-        "./img_combos/combo4.jpg",
-        "./img_combos/combo5.jpg",
-        "./img_combos/combo6.jpg",
-        "./img_combos/combo7.jpg",
-        "./img_combos/combo8.jpg",
-        "./img_combos/combo9.jpg"
-    ];
-    
-    const mostrarImagen = (index,$img,$src) => {
-        const $image = document.querySelector($src);
-        $image.src = $img[index];
-    };
-
-    const siguienteImagen = ($img,$src) => {
-        i = (i + 1) % $img.length;
-        mostrarImagen(i,$img,$src);
-    };
-
-    const imagenAnterior = ($img,$src) => {
-        i = (i - 1 + $img.length) % $img.length;
-        mostrarImagen(i,$img,$src);
-    };
-
-    $btnA.addEventListener("click", () => {
-        siguienteImagen($imagenes,".carousel-image");
-    });
-    $btnS.addEventListener("click", () => {
-        imagenAnterior($imagenes,".carousel-image");
-    });
-
-    setInterval(siguienteImagen, 3000);
-
     let $divPoster = document.createElement("div");
     $divPoster.classList.add("ContenidoPoster");
     $divPoster.appendChild(CrearDiv("CARTELERA"));
@@ -108,11 +51,41 @@ const inicioApp = () => {
     $divCombos.appendChild($btnS1);
 
     $btnA1.addEventListener("click", () => {
-        siguienteImagen($imagenescombos,".carousel-imagen-combo");
+        siguienteImagen();
     });
     $btnS1.addEventListener("click", () => {
-        imagenAnterior($imagenescombos,".carousel-imagen-combo");
+        imagenAnterior();
     });
+
+    let i = 0;
+    const $imagenescombos = [
+        "./img_combos/combo1.jpg",
+        "./img_combos/combo2.jpg",
+        "./img_combos/combo3.jpg",
+        "./img_combos/combo4.jpg",
+        "./img_combos/combo5.jpg",
+        "./img_combos/combo6.jpg",
+        "./img_combos/combo7.jpg",
+        "./img_combos/combo8.jpg",
+        "./img_combos/combo9.jpg"
+    ];
+    
+    const $image = document.querySelector(".carousel-imagen-combo");
+    const mostrarImagen = (index) => {
+        $image.src = $imagenescombos[index];
+    };
+
+    const siguienteImagen = () => {
+        i = (i + 1) % $imagenescombos.length;
+        mostrarImagen(i);
+    };
+
+    const imagenAnterior = () => {
+        i = (i - 1 + $imagenescombos.length) % $imagenescombos.length;
+        mostrarImagen(i);
+    };
+
+    setInterval(siguienteImagen, 3000);
 
 }
 export default inicioApp;
