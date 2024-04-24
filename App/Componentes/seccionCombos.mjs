@@ -68,9 +68,11 @@ const combosApp = () => {
 
     let $divCombosC = document.createElement("div");
     $divContenido.appendChild($divCombosC);
+    $divCombosC.setAttribute("id","id-combos");
 
-    const CrearDivImg = (nombreClass, rutaImg, contenidoText) => {
+    const CrearDivImg = (nombreClass, rutaImg, contenidoText,idDiv) => {
         let $divComb = document.createElement("div");
+        $divComb.setAttribute("class",idDiv);
         let $imgComb = CrearImg(nombreClass, rutaImg);
         let $divtitle = document.createElement("div");
         let $bComb = document.createElement("b");
@@ -81,15 +83,15 @@ const combosApp = () => {
         return $divComb;
     }
 
-    $divCombosC.appendChild(CrearDivImg("combo1", "./img_combos/combo1.jpg", "Combo 1"));
-    $divCombosC.appendChild(CrearDivImg("combo2", "./img_combos/combo2.jpg", "Combo 2"));
-    $divCombosC.appendChild(CrearDivImg("combo3", "./img_combos/combo3.jpg", "Combo 3"));
-    $divCombosC.appendChild(CrearDivImg("combo4", "./img_combos/combo4.jpg", "Combo 4"));
-    $divCombosC.appendChild(CrearDivImg("combo5", "./img_combos/combo5.jpg", "Combo 5"));
-    $divCombosC.appendChild(CrearDivImg("combo6", "./img_combos/combo6.jpg", "Combo 6"));
-    $divCombosC.appendChild(CrearDivImg("combo7", "./img_combos/combo7.jpg", "Combo 7"));
-    $divCombosC.appendChild(CrearDivImg("combo8", "./img_combos/combo8.jpg", "Combo 8"));
-    $divCombosC.appendChild(CrearDivImg("combo9", "./img_combos/combo9.jpg", "Combo 9"));
+    $divCombosC.appendChild(CrearDivImg("comboImg", "./img_combos/combo1.jpg", "Combo 1","divC"));
+    $divCombosC.appendChild(CrearDivImg("comboImg", "./img_combos/combo2.jpg", "Combo 2","divC"));
+    $divCombosC.appendChild(CrearDivImg("comboImg", "./img_combos/combo3.jpg", "Combo 3","divC"));
+    $divCombosC.appendChild(CrearDivImg("comboImg", "./img_combos/combo4.jpg", "Combo 4","divC"));
+    $divCombosC.appendChild(CrearDivImg("comboImg", "./img_combos/combo5.jpg", "Combo 5","divC"));
+    $divCombosC.appendChild(CrearDivImg("comboImg", "./img_combos/combo6.jpg", "Combo 6","divC"));
+    $divCombosC.appendChild(CrearDivImg("comboImg", "./img_combos/combo7.jpg", "Combo 7","divC"));
+    $divCombosC.appendChild(CrearDivImg("comboImg", "./img_combos/combo8.jpg", "Combo 8","divC"));
+    $divCombosC.appendChild(CrearDivImg("comboImg", "./img_combos/combo9.jpg", "Combo 9","divC"));
 
 }
 export default combosApp;
