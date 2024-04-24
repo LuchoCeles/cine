@@ -28,7 +28,6 @@ const inicioApp = () => {
 
     $divImg.appendChild(CrearImg("carousel-image", "./img_peliculas/img_1/kong_1.jpg"));
 
-    const $image = document.querySelector(".carousel-image");
     
     let i = 0;
     const $imagenes = [
@@ -47,26 +46,27 @@ const inicioApp = () => {
         "./img_combos/combo8.jpg",
         "./img_combos/combo9.jpg"
     ];
-
-    const mostrarImagen = (index,$imagenes) => {
-        $image.src = $imagenes[index];
+    
+    const mostrarImagen = (index,$img,$src) => {
+        const $image = document.querySelector($src);
+        $image.src = $img[index];
     };
 
-    const siguienteImagen = ($imagenes) => {
+    const siguienteImagen = ($imagenes,$src) => {
         i = (i + 1) % $imagenes.length;
-        mostrarImagen(i,$imagenes);
+        mostrarImagen(i,$imagenes,$src);
     };
 
-    const imagenAnterior = ($imagenes) => {
+    const imagenAnterior = ($imagenes,$src) => {
         i = (i - 1 + $imagenes.length) % $imagenes.length;
-        mostrarImagen(i,$imagenes);
+        mostrarImagen(i,$imagenes,$src);
     };
 
     $btnA.addEventListener("click", () => {
-        siguienteImagen($imagenes);
+        siguienteImagen($imagenes,".carousel-image");
     });
     $btnS.addEventListener("click", () => {
-        imagenAnterior($imagenes);
+        imagenAnterior($imagenes,".carousel-image");
     });
 
     setInterval(siguienteImagen, 3000);
@@ -108,10 +108,10 @@ const inicioApp = () => {
     $divCombos.appendChild($btnS1);
 
     $btnA1.addEventListener("click", () => {
-        siguienteImagen($imagenescombos);
+        siguienteImagen($imagenescombos,".carousel-imagen-combo");
     });
     $btnS1.addEventListener("click", () => {
-        imagenAnterior($imagenescombos);
+        imagenAnterior($imagenescombos,".carousel-imagen-combo");
     });
 
 }

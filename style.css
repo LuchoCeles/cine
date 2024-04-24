@@ -29,7 +29,7 @@ body{
 .carousel-image,.carousel-imagen{
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
 }
-.contenedorImagenCartelera{
+.contenedorImagenCartelera,.ContenidoCombos{
     margin-left: auto;
     margin-right: auto;/*con left y right centro el div*/
     width: 70%; 
