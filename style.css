@@ -26,7 +26,7 @@ ul li {
 body{
     background-color: black;
 }
-.carousel-image {
+.carousel-image,.carousel-imagen{
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
 }
 .contenedorImagenCartelera{

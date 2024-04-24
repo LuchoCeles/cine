@@ -28,14 +28,14 @@ const combosApp = () => {
     $divImg.appendChild($btnA);
     $divImg.appendChild($btnS);
 
-    $divImg.appendChild(CrearImg("carousel-image", "./img_peliculas/img_1/kong_1.jpg"));
+    $divImg.appendChild(CrearImg("carousel-imagen", "./img_peliculas/img_1/kong_1.jpg"));
     let i = 0;
-    const $imagenes = [ // No andan ni idea
+    const $imagenes = [
         "./img_peliculas/img_1/kong_1.jpg",
         "./img_peliculas/img_1/michi_1.jpg",
         "./img_peliculas/img_1/panda_1.jpg"
     ];
-    const $image = document.querySelector(".carousel-image");
+    const $image = document.querySelector(".carousel-imagen");
     const mostrarImagen = (index) => {
         $image.src = $imagenes[index];
     };
