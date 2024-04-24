@@ -19,12 +19,9 @@ const combosApp = () => {
     $secCombo.appendChild($divContenido);
     $divContenido.appendChild($divImg);
 
-    let $btnA = document.createElement("button");
-    let $btnS = document.createElement("button");
-    $btnA.classList.add("btnA");
-    $btnS.classList.add("btnS");
-    $btnA.textContent = "<";
-    $btnS.textContent = ">";
+    let $btnA = CrearBoton("btnA","<");
+    let $btnS = CrearBoton("btnS",">");
+    
     $divImg.appendChild($btnA);
     $divImg.appendChild($btnS);
 
