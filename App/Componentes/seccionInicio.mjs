@@ -52,14 +52,14 @@ const inicioApp = () => {
         $image.src = $img[index];
     };
 
-    const siguienteImagen = ($imagenes,$src) => {
-        i = (i + 1) % $imagenes.length;
-        mostrarImagen(i,$imagenes,$src);
+    const siguienteImagen = ($img,$src) => {
+        i = (i + 1) % $img.length;
+        mostrarImagen(i,$img,$src);
     };
 
-    const imagenAnterior = ($imagenes,$src) => {
-        i = (i - 1 + $imagenes.length) % $imagenes.length;
-        mostrarImagen(i,$imagenes,$src);
+    const imagenAnterior = ($img,$src) => {
+        i = (i - 1 + $img.length) % $img.length;
+        mostrarImagen(i,$img,$src);
     };
 
     $btnA.addEventListener("click", () => {
@@ -101,8 +101,8 @@ const inicioApp = () => {
 
     $divCombos.appendChild(CrearImg("carousel-imagen-combo", "./img_combos/combo1.jpg"));
 
-    let $btnA1 = CrearBoton("btnA","<");
-    let $btnS1 = CrearBoton("btnS",">");
+    let $btnA1 = CrearBoton("btnA1","<");
+    let $btnS1 = CrearBoton("btnS1",">");
 
     $divCombos.appendChild($btnA1);
     $divCombos.appendChild($btnS1);

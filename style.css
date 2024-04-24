@@ -26,7 +26,7 @@ ul li {
 body{
     background-color: black;
 }
-.carousel-image,.carousel-imagen{
+.carousel-image,.carousel-imagen,.carousel-imagen-combo{
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
 }
 .contenedorImagenCartelera,.ContenidoCombos{
@@ -38,7 +38,7 @@ body{
     padding-top: 0%;
     padding-bottom: 0%;
 }
-.btnA,.btnS {
+.btnA,.btnS,.btnA1,.btnS1{
     background-color: transparent;
     color: rgb(218, 216, 216);
     height: 99%; /* El botón ocupa toda la altura del contenedor */
@@ -47,14 +47,20 @@ body{
     cursor: pointer;
     position: absolute;
 }
-.btnA {
+.btnS1,.btnA1{
+    color: black;
+}
+.btnA,.btnA1{
     left: 0;
 }
-.btnS {
+.btnS,.btnS1{
     right: 0;
 }
 .btnA:hover, .btnS:hover {/*Se ilumina el lado cuando pasas encima*/
     background-color: rgba(255, 255, 255, 0.197); /* Cambiar el valor de transparencia según lo que desees */
+}
+.btnA1:hover, .btnS1:hover {/*Se ilumina el lado cuando pasas encima*/
+    background-color: rgba(14, 6, 6, 0.068); /* Cambiar el valor de transparencia según lo que desees */
 }
 #GaleriaPoster {
     display: flex;

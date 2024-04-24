@@ -1,4 +1,4 @@
-import { CrearImg } from "./funciones.mjs";
+import { CrearImg,CrearBoton } from "./funciones.mjs";
 const combosApp = () => {
     const $combos = document.getElementById("id-combos");
     const $secInicio = document.getElementById("sec-inicio");
