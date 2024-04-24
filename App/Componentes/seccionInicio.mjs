@@ -1,4 +1,4 @@
-import { CrearImg, CrearDiv } from "./funciones.mjs";
+import { CrearImg, CrearDiv ,CrearBoton} from "./funciones.mjs";
 const inicioApp = () => {
     const $inicio = document.getElementById("id-inicio");
     const $secInicio = document.getElementById("sec-inicio");
@@ -12,57 +12,8 @@ const inicioApp = () => {
     });
 
     let $divMain = document.createElement("div");
-    let $divImg = document.createElement("div");
-    $divImg.classList.add("contenedorImagenCartelera");
-
-    $divMain.classList.add("page");
     $secInicio.appendChild($divMain);
-    $divMain.appendChild($divImg);
-
-    let $btnA = document.createElement("button");
-    let $btnS = document.createElement("button");
-    $btnA.classList.add("btnA");
-    $btnS.classList.add("btnS");
-    $btnA.textContent = "<";
-    $btnS.textContent = ">";
-    $divImg.appendChild($btnA);
-    $divImg.appendChild($btnS);
-
-
-    $divImg.appendChild(CrearImg("carousel-image", "./img_peliculas/img_1/kong_1.jpg"));
-
-    const $image = document.querySelector(".carousel-image");
     
-    let i = 0;
-    const $imagenes = [
-        "./img_peliculas/img_1/kong_1.jpg",
-        "./img_peliculas/img_1/michi_1.jpg",
-        "./img_peliculas/img_1/panda_1.jpg"
-    ];
-    
-    const mostrarImagen = (index) => {
-        $image.src = $imagenes[index];
-    };
-
-    const siguienteImagen = () => {
-        i = (i + 1) % $imagenes.length;
-        mostrarImagen(i);
-    };
-
-    const imagenAnterior = () => {
-        i = (i - 1 + $imagenes.length) % $imagenes.length;
-        mostrarImagen(i);
-    };
-
-    $btnA.addEventListener("click", () => {
-        siguienteImagen();
-    });
-    $btnS.addEventListener("click", () => {
-        imagenAnterior();
-    });
-
-    setInterval(siguienteImagen, 3000);
-
     let $divPoster = document.createElement("div");
     $divPoster.classList.add("ContenidoPoster");
     $divPoster.appendChild(CrearDiv("CARTELERA"));
@@ -86,5 +37,55 @@ const inicioApp = () => {
     $ul.appendChild($li2);
     $ul.appendChild($li3);
     $divPoster.appendChild($ul);
+
+    const $divCombos = document.createElement("div");
+    $divCombos.classList.add("ContenidoCombos");
+    $secInicio.appendChild($divCombos);
+
+    $divCombos.appendChild(CrearImg("carousel-imagen-combo", "./img_combos/combo1.jpg"));
+
+    let $btnA1 = CrearBoton("btnA1","<");
+    let $btnS1 = CrearBoton("btnS1",">");
+
+    $divCombos.appendChild($btnA1);
+    $divCombos.appendChild($btnS1);
+
+    $btnA1.addEventListener("click", () => {
+        siguienteImagen();
+    });
+    $btnS1.addEventListener("click", () => {
+        imagenAnterior();
+    });
+
+    let i = 0;
+    const $imagenescombos = [
+        "./img_combos/combo1.jpg",
+        "./img_combos/combo2.jpg",
+        "./img_combos/combo3.jpg",
+        "./img_combos/combo4.jpg",
+        "./img_combos/combo5.jpg",
+        "./img_combos/combo6.jpg",
+        "./img_combos/combo7.jpg",
+        "./img_combos/combo8.jpg",
+        "./img_combos/combo9.jpg"
+    ];
+    
+    const $image = document.querySelector(".carousel-imagen-combo");
+    const mostrarImagen = (index) => {
+        $image.src = $imagenescombos[index];
+    };
+
+    const siguienteImagen = () => {
+        i = (i + 1) % $imagenescombos.length;
+        mostrarImagen(i);
+    };
+
+    const imagenAnterior = () => {
+        i = (i - 1 + $imagenescombos.length) % $imagenescombos.length;
+        mostrarImagen(i);
+    };
+
+    setInterval(siguienteImagen, 3000);
+
 }
 export default inicioApp;

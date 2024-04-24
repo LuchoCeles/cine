@@ -26,3 +26,9 @@ export const CrearUl = (a) => {
     $ul.appendChild($li);
     return $ul;
 }
+export const CrearBoton = (NameClass, Content) => {
+    let $btn = document.createElement("button");
+    $btn.classList.add(NameClass);
+    $btn.textContent = Content;
+    return $btn;
+}
