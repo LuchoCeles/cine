@@ -1,4 +1,4 @@
-import { CrearImg,CrearDiv,CrearBoton } from "./funciones.mjs";
+import { CrearImg,CrearDiv } from "./funciones.mjs";
 const carteleraApp = () => {
     const $cartelera = document.getElementById("id-cartelera");
     const $secInicio = document.getElementById("sec-inicio");
