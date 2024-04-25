@@ -24,6 +24,13 @@ ul li {
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+#id-inicio,#id-combos,#id-cartelera{
+    color: rgba(255, 255, 255, 0.733);
+    text-decoration: none;
+}
+#id-inicio:active,#id-combos:active,#id-cartelera:active{
+    color: white;
+}
 body{
     background-color: rgb(148,149,139);
 }

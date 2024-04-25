@@ -11,6 +11,8 @@ const inicioApp = () => {
         $secCombo.style.display = "none";
     });
 
+    $secInicio.style.color="white";
+
     let $divMain = document.createElement("div");
     let $divCarteleraEncabezado = CrearDiv("EN CARTELERA");
     $divCarteleraEncabezado.classList.add("SubTitulo");
