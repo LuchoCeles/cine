@@ -90,6 +90,8 @@ body{
     padding: 40px;
 }
 .SubTitulo{
+    margin-top: 2%;
+    margin-bottom: 2%;
     background-color:rgb(42,26,29) ;
     color: rgb(255, 255, 255);
     font-size: 40px;
