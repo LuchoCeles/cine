@@ -11,13 +11,12 @@ const inicioApp = () => {
         $secCombo.style.display = "none";
     });
 
-    let $divMain = document.createElement("div");
-    $secInicio.appendChild($divMain);
     
     let $divPoster = document.createElement("div");
+    $secInicio.appendChild($divPoster);
+    
     $divPoster.classList.add("ContenidoPoster");
     $divPoster.appendChild(CrearDiv("CARTELERA"));
-    $divMain.appendChild($divPoster);
 
     let $li1 = document.createElement("li");
     let $li2 = document.createElement("li");

@@ -72,25 +72,32 @@ body{
     padding: 0; /* Esto quita el padding por defecto de la lista */
 }
 #GaleriaPosterCartelera {
-    margin-left: auto;
-    margin-right: auto;
     background-color:rgb(124, 127, 101);
     list-style-type: none; /* Esto quita los puntos de la lista */
     padding: 0; /* Esto quita el padding por defecto de la lista */
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ContenidoPoster{
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .li-texto{
- display: flex;
- justify-content:space-evenly;
- align-items: start;
- width: 90vw;
- margin: auto;
- padding: 2vw;
-    
+    display: flex;
+    justify-content:space-evenly;
+    align-items: start;
+    width: 80vw;
+    margin: auto;
+    padding: 2vw;   
 }
 .DescripcionImg{
-    height: 100%;
-    margin-left: 10px;
-    display: flex;
+    padding: 0px 2rem;
 }
 .img_Poster{
     max-height: 250px;
@@ -116,6 +123,8 @@ body{
     color: rgb(255, 255, 255);
     font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    display: block;
+    width: 80vw;
 }
 b{
     color: black;

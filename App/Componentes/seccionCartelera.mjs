@@ -13,15 +13,13 @@ const carteleraApp = () => {
 
     $secCartelera.style.display = "none";
 
-    let $divMain = document.createElement("div");
-    $secCartelera.appendChild($divMain);
-
     let $divPoster = document.createElement("div");
+    $secCartelera.appendChild($divPoster);
+
     $divPoster.classList.add("ContenidoPoster");
     let $divCarteleraEncabezado = CrearDiv("CARTELERA");
     $divCarteleraEncabezado.classList.add("SubTitulo");
     $divPoster.appendChild($divCarteleraEncabezado);
-    $divMain.appendChild($divPoster);
 
     let $li1 = document.createElement("li");
     let $li2 = document.createElement("li");
