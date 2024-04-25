@@ -72,8 +72,28 @@ body{
     padding: 0; /* Esto quita el padding por defecto de la lista */
 }
 #GaleriaPosterCartelera {
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(124, 127, 101);
     list-style-type: none; /* Esto quita los puntos de la lista */
     padding: 0; /* Esto quita el padding por defecto de la lista */
+}
+.li-texto{
+ display: flex;
+ justify-content:space-evenly;
+ align-items: start;
+ width: 90vw;
+ margin: auto;
+ padding: 2vw;
+    
+}
+.DescripcionImg{
+    height: 100%;
+    margin-left: 10px;
+    display: flex;
+}
+.img_Poster{
+    max-height: 250px;
 }
 #GaleriaPoster li {
     margin-right: 10px; /* Esto añade un margen a la derecha de cada elemento li */

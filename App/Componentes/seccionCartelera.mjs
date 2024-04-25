@@ -27,6 +27,10 @@ const carteleraApp = () => {
     let $li2 = document.createElement("li");
     let $li3 = document.createElement("li");
 
+    $li1.classList.add("li-texto");
+    $li2.classList.add("li-texto");
+    $li3.classList.add("li-texto");
+    
     $li1.appendChild(CrearImg("img_Poster", "./img_peliculas/img_2/kong_2.jpg"));
     $li2.appendChild(CrearImg("img_Poster", "./img_peliculas/img_2/michi_2.jpg"));
     $li3.appendChild(CrearImg("img_Poster", "./img_peliculas/img_2/panda_2.jpg"));
