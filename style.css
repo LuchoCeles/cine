@@ -40,7 +40,9 @@ body{
     padding-top: 0%;
     padding-bottom: 0%;
 }
-
+.ContenidoCombos{
+    margin-top: 3%;
+}
 .btnA,.btnS,.btnA1,.btnS1{
     background-color: transparent;
     color: rgb(218, 216, 216);
@@ -87,6 +89,23 @@ body{
     width: 80vw;
     margin: auto;
     padding: 2vw;   
+}
+.divBotonesCombos{
+    margin-left: 79%;
+    position: absolute;
+    margin-top: -40.4%;
+}
+.btnCarruselCombos{
+    background-color: rgb(42,26,29);
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    margin: 1px;
+}
+.btnCarruselCombos:hover{
+    background-color: rgb(71, 41, 47);
 }
 .DescripcionImg{
     padding: 0px 2rem;
