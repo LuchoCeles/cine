@@ -1,4 +1,4 @@
-import { CrearImg } from "./funciones.mjs";
+import { CrearDiv, CrearImg } from "./funciones.mjs";
 const combosApp = () => {
     const $combos = document.getElementById("id-combos");
     const $secInicio = document.getElementById("sec-inicio");
@@ -11,19 +11,19 @@ const combosApp = () => {
         $secCombo.style.display = "block";
     });
 
+    $secCombo.style.display = "none";
+
     let $divContenido = document.createElement("div");
     $secCombo.appendChild($divContenido);
 
-    let $divCombos = document.createElement("div");
-    let $hCombo = document.createElement("h2");
-    $hCombo.textContent = "Combos";
+    let $divCombos = CrearDiv("Combos");
+    $divCombos.classList.add("SubTitulo");
 
-    $divCombos.appendChild($hCombo);
     $divContenido.appendChild($divCombos);
 
     let $divCombosC = document.createElement("div");
     $divContenido.appendChild($divCombosC);
-    $divCombosC.setAttribute("id","id-combos");
+    $divCombosC.classList.add("id-combos");
 
     const CrearDivImg = (nombreClass, rutaImg, contenidoText,idDiv) => {
         let $divComb = document.createElement("div");

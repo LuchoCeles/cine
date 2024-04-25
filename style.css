@@ -27,7 +27,7 @@ ul li {
 body{
     background-color: rgb(148,149,139);
 }
-.carousel-image,.carousel-imagen,.carousel-imagen-combo{
+.carousel-image,.carousel-imagen-combo{
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
     box-shadow:10px 10px 5px rgba(0, 0, 0, 0.329); 
 }
@@ -79,8 +79,7 @@ body{
     margin-right: 10px; /* Esto añade un margen a la derecha de cada elemento li */
     color: white;
 }
-#id-combos{
-
+.id-combos{
     max-width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -90,7 +89,7 @@ body{
 .divC{
     padding: 40px;
 }
-h2{
+.SubTitulo{
     background-color:rgb(42,26,29) ;
     color: rgb(255, 255, 255);
     font-size: 40px;
