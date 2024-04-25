@@ -80,14 +80,6 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-
-.ContenidoPoster{
-    width: 98vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .li-texto{
     display: flex;
     justify-content:space-evenly;
@@ -109,9 +101,15 @@ body{
 .id-combos{
     max-width: 80%;
     margin: 0 auto;
+    text-align: center; /*Esto centra los divs de dentro*/
+    background-color:  rgb(124, 127, 101);
+}
+.ContenidoPoster{
+    display: block;
+    max-width: 82%;
+    margin: 0 auto;
     text-align: center;
     background-color:  rgb(124, 127, 101);
-    
 }
 .divC{
     padding: 40px;
@@ -124,7 +122,6 @@ body{
     font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     display: block;
-    width: 80vw;
 }
 b{
     color: black;
