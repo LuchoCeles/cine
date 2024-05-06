@@ -1,4 +1,5 @@
 import { CrearImg, CrearDiv } from "./funciones.mjs";
+import { getCarteleraElements } from "../../services/Elements/getCarteleraElements.mjs";
 const carteleraApp = () => {
     const $cartelera = document.getElementById("id-cartelera");
     const $secInicio = document.getElementById("sec-inicio");
@@ -49,6 +50,15 @@ const carteleraApp = () => {
     let $p1 = document.createElement("p");
     let $p2 = document.createElement("p");
     let $p3 = document.createElement("p");
+
+    const loadElements = async () =>{
+        let rsp = await getCarteleraElements();
+        if(rsp?.Error == false){
+            setItems(rsp.Data);
+            setActual(0);
+        }
+    }
+
 
     $p1.textContent = "¡La batalla épica continúa! La película de Legendary Pictures continúa el explosivo enfrentamiento de “Godzilla vs. Kong” con una aventura completamente nueva que enfrenta al todopoderoso Kong y al temible Godzilla contra una colosal amenaza no descubierta escondida dentro de nuestro mundo, desafiando su propia existencia y la nuestra. “Godzilla y Kong: " + 
     "El nuevo imperio” profundiza en las historias de estos Titanes y sus orígenes, así como en los misterios de la Isla Calavera y más allá, mientras descubre la batalla mítica que ayudó a forjar a estos seres extraordinarios y los unió a la humanidad para siempre.";
