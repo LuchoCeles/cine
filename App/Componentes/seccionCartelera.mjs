@@ -39,7 +39,7 @@ const carteleraApp = () => {
                 let $li = document.createElement("li");
                 $div.classList.add("DescripcionImg");
                 $li.classList.add("li-texto");
-                $div.appendChild(CrearP(element.titulo));
+                $div.appendChild(CrearP(element.titulo,"Titulo-Pelicula"));
                 $div.appendChild(CrearP(element.descripcion));
                 $div.appendChild(CrearP(element.genero));
                 $div.appendChild(CrearP(element.director));

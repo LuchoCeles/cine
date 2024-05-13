@@ -27,9 +27,10 @@ export const CrearUl = (a) => {
     return $ul;
 }
 
-export const CrearP = (texto)=>{
+export const CrearP = (texto,className = "texto-descripcion-pelicula")=>{
     let $p = document.createElement("p");
     $p.textContent=texto;
+    $p.classList.add(className);
     return $p;
 }
 
