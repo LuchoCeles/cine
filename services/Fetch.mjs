@@ -12,7 +12,7 @@ export async function Get (url, dataObject){ // url seria el llamado al Get en e
     .then((res)=>res);
 }
 
-export async function Patch (url){ // url seria el llamado al Get en especifico
+export async function Patch (url){ 
     return await fetch( backendurl + url, {
         method:'PATCH',
         mode:'cors',
@@ -24,8 +24,8 @@ export async function Patch (url){ // url seria el llamado al Get en especifico
     .then((res)=>res);
 }
 
-export async function Delete (url, dataObject){ // url seria el llamado al Get en especifico
-    const objString = '?' + new URLSearchParams(dataObject).toString(); //Tansforma el objeto a un metodo querystring
+export async function Delete (url, dataObject){
+    const objString = '?' + new URLSearchParams(dataObject).toString(); 
     return await fetch( backendurl + url + objString,{
         method:'DELETE',
         mode:'cors',
