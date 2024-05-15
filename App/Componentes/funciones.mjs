@@ -26,6 +26,16 @@ export const CrearUl = (a) => {
     $ul.appendChild($li);
     return $ul;
 }
+
+export const CrearP = (texto,className = "texto-descripcion-pelicula")=>{
+    let $p = document.createElement("p");
+    $p.textContent=texto;
+    $p.classList.add(className);
+    return $p;
+}
+
+
+
 export const CrearBoton = (NameClass, Content) => {
     let $btn = document.createElement("button");
     $btn.classList.add(NameClass);
