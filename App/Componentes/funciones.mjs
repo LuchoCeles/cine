@@ -1,3 +1,5 @@
+import { getCartelera } from "../../services/Elements/CarteleraElements.mjs";
+
 export const CrearImg = (nombreclase, src) => {
     let $img = document.createElement("img");
     $img.classList.add(nombreclase);
@@ -27,9 +29,9 @@ export const CrearUl = (a) => {
     return $ul;
 }
 
-export const CrearP = (texto,className = "texto-descripcion-pelicula")=>{
+export const CrearP = (texto, className = "texto-descripcion-pelicula") => {
     let $p = document.createElement("p");
-    $p.textContent=texto;
+    $p.textContent = texto;
     $p.classList.add(className);
     return $p;
 }
@@ -41,4 +43,26 @@ export const CrearBoton = (NameClass, Content) => {
     $btn.classList.add(NameClass);
     $btn.textContent = Content;
     return $btn;
+}
+
+export const loadElements = async ($contenedor) => {
+    let rsp = await getCartelera();
+    console.log(rsp);
+
+    if (rsp?.error === false) {
+        rsp.data.forEach(element => {
+            let $div = document.createElement("div");
+            let $li = document.createElement("li");
+            $div.classList.add("DescripcionImg");
+            $li.classList.add("li-texto");
+            $div.appendChild(CrearP(element.titulo, "Titulo-Pelicula"));
+            $div.appendChild(CrearP(element.descripcion));
+            $div.appendChild(CrearP(element.genero));
+            $div.appendChild(CrearP(element.director));
+            $div.appendChild(CrearP(element.actores));
+            $li.appendChild(CrearImg("img_Poster", element.url));
+            $li.appendChild($div);
+            $contenedor.appendChild($li);
+        });
+    }
 }

@@ -1,5 +1,4 @@
-import { CrearImg, CrearDiv, CrearP } from "./funciones.mjs";
-import { getCartelera } from "../../services/Elements/CarteleraElements.mjs";
+import { CrearDiv,loadElements } from "./funciones.mjs";
 const carteleraApp = () => {
     const $cartelera = document.getElementById("id-cartelera");
     const $secInicio = document.getElementById("sec-inicio");
@@ -29,29 +28,7 @@ const carteleraApp = () => {
     let $ul = document.createElement("ul");
     $ul.setAttribute("id", "GaleriaPosterCartelera");
 
-    const loadElements = async () => {
-        let rsp = await getCartelera();
-        console.log(rsp);
-
-        if (rsp?.error === false) {
-            rsp.data.forEach(element => {
-                let $div = document.createElement("div");
-                let $li = document.createElement("li");
-                $div.classList.add("DescripcionImg");
-                $li.classList.add("li-texto");
-                $div.appendChild(CrearP(element.titulo,"Titulo-Pelicula"));
-                $div.appendChild(CrearP(element.descripcion));
-                $div.appendChild(CrearP(element.genero));
-                $div.appendChild(CrearP(element.director));
-                $div.appendChild(CrearP(element.actores));
-                $li.appendChild(CrearImg("img_Poster", element.url));
-                $li.appendChild($div);
-                $ul.appendChild($li);
-            });
-        }
-    }
-
-    loadElements();
+    loadElements($ul);
 
     /*
         {
