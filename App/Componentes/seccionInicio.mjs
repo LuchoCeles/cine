@@ -25,7 +25,7 @@ const inicioApp = () => {
     let $ul = document.createElement("ul");
     $ul.setAttribute("id", "GaleriaPoster");
 
-    loadElements($ul);
+    loadElements($ul,false);
 
     $divPoster.appendChild($ul);
     $secInicio.appendChild($divPoster);

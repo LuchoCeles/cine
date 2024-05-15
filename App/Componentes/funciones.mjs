@@ -45,7 +45,7 @@ export const CrearBoton = (NameClass, Content) => {
     return $btn;
 }
 
-export const loadElements = async ($contenedor) => {
+export const loadElements = async ($contenedor,  mostrarDetalles = true) => {
     let rsp = await getCartelera();
     console.log(rsp);
 
@@ -56,10 +56,13 @@ export const loadElements = async ($contenedor) => {
             $div.classList.add("DescripcionImg");
             $li.classList.add("li-texto");
             $div.appendChild(CrearP(element.titulo, "Titulo-Pelicula"));
-            $div.appendChild(CrearP(element.descripcion));
-            $div.appendChild(CrearP(element.genero));
-            $div.appendChild(CrearP(element.director));
-            $div.appendChild(CrearP(element.actores));
+            if(mostrarDetalles){
+                $div.appendChild(CrearP(element.descripcion));
+                $div.appendChild(CrearP(element.genero));
+                $div.appendChild(CrearP(element.director));
+                $div.appendChild(CrearP(element.actores));
+            }
+            
             $li.appendChild(CrearImg("img_Poster", element.url));
             $li.appendChild($div);
             $contenedor.appendChild($li);
