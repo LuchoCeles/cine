@@ -5,6 +5,7 @@
     max-height: 100px;
 }
 .LogoNav{
+    margin-right: 30px;
     max-height: 100px;
 }
 #nav-main {
@@ -23,13 +24,21 @@ ul li {
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+#id-inicio,#id-combos,#id-cartelera{
+    color: rgba(255, 255, 255, 0.733);
+    text-decoration: none;
+}
+#id-inicio:active,#id-combos:active,#id-cartelera:active{
+    color: white;
+}
 body{
-    background-color: black;
+    background-color: rgb(148,149,139);
 }
-.carousel-image {
+.carousel-image,.carousel-imagen-combo{
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    box-shadow:10px 10px 5px rgba(0, 0, 0, 0.329); 
 }
-.contenedorImagenCartelera{
+.contenedorImagenCartelera,.ContenidoCombos{
     margin-left: auto;
     margin-right: auto;/*con left y right centro el div*/
     width: 70%; 
@@ -38,7 +47,10 @@ body{
     padding-top: 0%;
     padding-bottom: 0%;
 }
-.btnA,.btnS {
+.ContenidoCombos{
+    margin-top: 3%;
+}
+.btnA,.btnS,.btnA1,.btnS1{
     background-color: transparent;
     color: rgb(218, 216, 216);
     height: 99%; /* El botón ocupa toda la altura del contenedor */
@@ -47,14 +59,20 @@ body{
     cursor: pointer;
     position: absolute;
 }
-.btnA {
+.btnS1,.btnA1{
+    color: black;
+}
+.btnA,.btnA1{
     left: 0;
 }
-.btnS {
+.btnS,.btnS1{
     right: 0;
 }
 .btnA:hover, .btnS:hover {/*Se ilumina el lado cuando pasas encima*/
     background-color: rgba(255, 255, 255, 0.197); /* Cambiar el valor de transparencia según lo que desees */
+}
+.btnA1:hover, .btnS1:hover {/*Se ilumina el lado cuando pasas encima*/
+    background-color: rgba(14, 6, 6, 0.068); /* Cambiar el valor de transparencia según lo que desees */
 }
 #GaleriaPoster {
     display: flex;
@@ -62,10 +80,83 @@ body{
     list-style-type: none; /* Esto quita los puntos de la lista */
     padding: 0; /* Esto quita el padding por defecto de la lista */
 }
-
+#GaleriaPosterCartelera {
+    background-color:rgb(124, 127, 101);
+    list-style-type: none; /* Esto quita los puntos de la lista */
+    padding: 0; /* Esto quita el padding por defecto de la lista */
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.li-texto{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: start;
+    width: 80vw;
+    margin: auto;
+    padding: 2vw;   
+}
+.divBotonesCombos{
+    margin-left: 79%;
+    position: absolute;
+    margin-top: -40.4%;
+}
+.btnCarruselCombos{
+    background-color: rgb(42,26,29);
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    margin: 1px;
+}
+.btnCarruselCombos:hover{
+    background-color: rgb(71, 41, 47);
+}
+.DescripcionImg{
+    padding: 0px 2rem;
+}
+.img_Poster{
+    max-height: 250px;
+}
 #GaleriaPoster li {
     margin-right: 10px; /* Esto añade un margen a la derecha de cada elemento li */
     color: white;
 }
+.id-combos{
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center; /*Esto centra los divs de dentro*/
+    background-color:  rgb(124, 127, 101);
+}
+.ContenidoPoster{
+    display: block;
+    max-width: 82%;
+    margin: 0 auto;
+    text-align: center;
+    background-color:  rgb(124, 127, 101);
+}
+.divC{
+    padding: 40px;
+}
+.SubTitulo{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color:rgb(42,26,29) ;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    display: block;
+}
+b{
+    color: black;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+.comboImg{
+    box-shadow:10px 10px 5px rgba(0, 0, 0, 0.329); 
+}
+
 
 
