@@ -47,7 +47,6 @@ export const CrearBoton = (NameClass, Content) => {
 
 export const loadElements = async ($contenedor,  mostrarDetalles = true) => {
     let rsp = await getCartelera();
-    console.log(rsp);
 
     if (rsp?.error === false) {
         rsp.data.forEach(element => {

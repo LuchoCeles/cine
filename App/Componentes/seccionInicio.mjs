@@ -80,41 +80,5 @@ const inicioApp = () => {
 
     setInterval(siguienteImagen, 3000);
 
-    const $divBotones = document.createElement("div");
-    $divBotones.classList.add("divBotonesCombos");
-
-    $divCombos.appendChild($divBotones);
-
-    let $btn1 = CrearBoton("btnCarruselCombos", "1");
-    let $btn2 = CrearBoton("btnCarruselCombos", "2");
-    let $btn3 = CrearBoton("btnCarruselCombos", "3");
-    let $btn4 = CrearBoton("btnCarruselCombos", "4");
-    let $btn5 = CrearBoton("btnCarruselCombos", "5");
-    let $btn6 = CrearBoton("btnCarruselCombos", "6");
-    let $btn7 = CrearBoton("btnCarruselCombos", "7");
-    let $btn8 = CrearBoton("btnCarruselCombos", "8");
-    let $btn9 = CrearBoton("btnCarruselCombos", "9");
-
-    $btn1.addEventListener("click", () => { mostrarImagen(0) });
-    $btn2.addEventListener("click", () => { mostrarImagen(1) });
-    $btn3.addEventListener("click", () => { mostrarImagen(2) });
-    $btn4.addEventListener("click", () => { mostrarImagen(3) });
-    $btn5.addEventListener("click", () => { mostrarImagen(4) });
-    $btn6.addEventListener("click", () => { mostrarImagen(5) });
-    $btn7.addEventListener("click", () => { mostrarImagen(6) });
-    $btn8.addEventListener("click", () => { mostrarImagen(7) });
-    $btn9.addEventListener("click", () => { mostrarImagen(8) });
-
-
-    $divBotones.appendChild($btn1);
-    $divBotones.appendChild($btn2);
-    $divBotones.appendChild($btn3);
-    $divBotones.appendChild($btn4);
-    $divBotones.appendChild($btn5);
-    $divBotones.appendChild($btn6);
-    $divBotones.appendChild($btn7);
-    $divBotones.appendChild($btn8);
-    $divBotones.appendChild($btn9);
-
 }
 export default inicioApp;
