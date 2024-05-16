@@ -56,7 +56,7 @@ ul li {
 #id-inicio:active,#id-combos:active,#id-cartelera:active{
     color: white;
 }
-#sec-inicio .ContenidoPoster #GaleriaPoster .li-texto{
+#sec-inicio .ContenidoPoster #GaleriaPoster .li-texto{ /* texto de la cartelera*/
     display: block; /* acomoda uno encima del otro */
 }
 #GaleriaPoster {
