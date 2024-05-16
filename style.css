@@ -17,6 +17,11 @@ ul {
     list-style-type: none;
     padding: 0;
 }
+.Titulo-Pelicula{
+    color: black;
+    font-family: 'poppins', sans-serif;
+    font-size: 22px;
+}
 ul li {
     margin-right: 10px;
 }
@@ -114,10 +119,14 @@ body{
 .btnCarruselCombos:hover{
     background-color: rgb(71, 41, 47);
 }
+#sec-inicio .ContenidoPoster #GaleriaPoster .li-texto{
+    display: block; /* acomoda uno encima del otro */
+}
 .DescripcionImg{
     padding: 0px 2rem;
 }
 .img_Poster{
+    box-shadow:5px 5px 5px rgba(0, 0, 0, 0.329);
     max-height: 250px;
 }
 #GaleriaPoster li {

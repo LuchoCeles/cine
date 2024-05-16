@@ -39,8 +39,6 @@ const carteleraApp = () => {
         "actores": "Actores: Rebecca Hall, Brian Tyree Henry",
         "url": "./img_peliculas/img_2/kong_2.jpg"
         }
-    */
-    /*
         {
         "titulo": "Un gato con suerte",
         "descripcion":  "Beckett es un gato mimado y egoísta que da por sentada la suerte que ha tenido. Sin embargo, todo eso está a punto de cambiar cuando, por descuido, pierde su novena vida. Sin vidas restantes y enfrentado a lo inevitable, Beckett suplica que las cosas vuelvan a ser como antes. Al principio su petición es rechazada, pero en un momento de empatía excepcional, el 'Guardián' cambia de opinión y le permite regresar a la Tierra con una vida completamente nueva. Sin embargo, lo que no se da cuenta de inmediato es que cada una de estas nuevas vidas lo verá regresar en una variedad de formas diferentes... Beckett pasará de ser una mascota gloriosamente ensimismada a un héroe abnegado; cada una de sus nuevas formas le enseñará una lección valiosa para encontrar la mejor versión de ti mismo.",
@@ -49,8 +47,6 @@ const carteleraApp = () => {
         "actores": "Actores: Mo Gilligan, Simone Ashley",
         "url": "./img_peliculas/img_2/michi_2.jpg"
         }
-    */
-    /*
         {
         "titulo": "Kung Fu Panda 4",
         "descripcion":  "Después de tres aventuras desafiando a la muerte y derrotando a villanos de clase mundial con su incomparable coraje y sus alocadas habilidades en las artes marciales, Po, el Guerrero Dragón, es llamado por el destino para tomarse un descanso. Específicamente, se le pide que se convierta en el líder espiritual del Valle de la Paz. Esto plantea un par de problemas obvios. En primer lugar, Po sabe tanto de liderazgo espiritual como de dieta paleo, y en segundo lugar, necesita encontrar y entrenar rápidamente a un nuevo Guerrero Dragón antes de poder asumir su nuevo y elevado cargo.",       

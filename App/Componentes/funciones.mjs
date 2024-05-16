@@ -55,6 +55,7 @@ export const loadElements = async ($contenedor,  mostrarDetalles = true) => {
             let $li = document.createElement("li");
             $div.classList.add("DescripcionImg");
             $li.classList.add("li-texto");
+            
             $div.appendChild(CrearP(element.titulo, "Titulo-Pelicula"));
             if(mostrarDetalles){
                 $div.appendChild(CrearP(element.descripcion));
