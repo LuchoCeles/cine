@@ -23,7 +23,20 @@ export async function Patch (url){
     .then((res)=> res.json())
     .then((res)=>res);
 }
-
+export async function PostU (url,file){ 
+    let data = new FormData();
+    data.append('file',file);
+    return await fetch( backendurl + url, {
+        method:'Post',
+        mode:'cors',
+        /*headers:{
+            'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }*/
+        body:data
+    })
+    .then((res)=> res.json())
+    .then((res)=>res);
+}
 export async function Delete (url, dataObject){
     const objString = '?' + new URLSearchParams(dataObject).toString(); 
     return await fetch( backendurl + url + objString,{
