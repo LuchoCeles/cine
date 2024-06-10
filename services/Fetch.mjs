@@ -25,9 +25,10 @@ export async function PostU (url,cartelera){
     data.append('actores', cartelera.actores);
     data.append('genero', cartelera.genero);
     data.append('director', cartelera.director);
-    data.append('file', cartelera.file);
+    data.append('File', cartelera.file);
+    data.append('url', "");
     return await fetch( backendurl + url, {
-        method:'Post',
+        method:'POST',
         mode:'cors',
         body:data
     })

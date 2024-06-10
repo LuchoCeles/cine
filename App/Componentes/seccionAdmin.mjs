@@ -1,5 +1,5 @@
-import { CrearBoton,CrearInput } from "./funciones.mjs";
-import {postFile} from "../../services/Elements/CarteleraElements.mjs"
+import { CrearBoton, CrearInput } from "./funciones.mjs";
+import { postFile } from "../../services/Elements/CarteleraElements.mjs"
 const adminApp = () => {
     const $admin = document.getElementById("id-admin");
     const $secInicio = document.getElementById("sec-inicio");
@@ -19,15 +19,15 @@ const adminApp = () => {
     let $divMain = document.createElement("div");
     $divMain.className = "divmain-admin";
 
-    let $inputTitulo = CrearInput("input-admin","Titulo");
+    let $inputTitulo = CrearInput("input-admin", "Titulo");
 
-    let $inputDes = CrearInput("input-admin","Descripcion");
+    let $inputDes = CrearInput("input-admin", "Descripcion");
 
-    let $inputGenero = CrearInput("input-admin","Genero");
-    
-    let $inputDirec = CrearInput("input-admin","Director");
-    
-    let $inputActores = CrearInput("input-admin","Actores");
+    let $inputGenero = CrearInput("input-admin", "Genero");
+
+    let $inputDirec = CrearInput("input-admin", "Director");
+
+    let $inputActores = CrearInput("input-admin", "Actores");
 
     let $inputFile = document.createElement("input");
     $inputFile.type = "file";
@@ -35,14 +35,16 @@ const adminApp = () => {
     let $btn = CrearBoton("button", "ENVIAR");
     $btn.type = "submit";
 
-    $btn.addEventListener('click',()=>{
-        postFile({titulo:$inputTitulo.value,
-            descripcion:$inputDes.value,
-            genero:$inputGenero.value,
-            director:$inputDirec.value,
-            actores:$inputActores.value,
-            file:$inputFile.files[0]
-        });
+    $btn.addEventListener('click', () => {
+        console.log(postFile({
+            titulo: $inputTitulo.value,
+            descripcion: $inputDes.value,
+            genero: $inputGenero.value,
+            director: $inputDirec.value,
+            actores: $inputActores.value,
+            file: $inputFile.files[0]
+        }));
+        limpiar();
     });
 
 
@@ -55,6 +57,20 @@ const adminApp = () => {
     $divMain.append($btn);
 
     $secAdmin.append($divMain);
+
+    const limpiar = () => {
+        $inputTitulo.value = "";
+
+        $inputDes.value = "";
+
+        $inputGenero.value = "";
+
+        $inputDirec.value = "";
+
+        $inputActores.value = "";
+
+        $inputFile.value = "";
+    }
 }
 
 export default adminApp;

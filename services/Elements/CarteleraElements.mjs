@@ -5,5 +5,5 @@ export async function getCartelera() {
     return rsp;
 }
 export async function postFile(cartelera){
-    await PostU(url+"PostU",cartelera);
+    await PostU(url+'PostU',cartelera);
 }
