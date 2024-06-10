@@ -4,11 +4,15 @@ const inicioApp = () => {
     const $secInicio = document.getElementById("sec-inicio");
     const $secCartelera = document.getElementById("sec-cartelera");
     const $secCombo = document.getElementById("sec-combo");
-
+    const $secAdmin = document.getElementById("sec-admin");
+    const $secCarrusel = document.getElementById("sec-carrusel");
+    
     $inicio.addEventListener("click", () => {
+        $secCarrusel.style.display = "block";
         $secInicio.style.display = "block";
         $secCartelera.style.display = "none";
         $secCombo.style.display = "none";
+        $secAdmin.style.display = "none";
     });
 
     $secInicio.style.color = "white";

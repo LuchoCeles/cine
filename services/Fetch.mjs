@@ -3,10 +3,7 @@ export async function Get (url, dataObject){ // url seria el llamado al Get en e
     const objString = '?' + new URLSearchParams(dataObject).toString(); //Tansforma el objeto a un metodo querystring
     return await fetch( backendurl + url + objString,{
         method:'GET',
-        mode:'cors',
-        /*headers:{
-            'Authorization': `Bearer ${localStorage.getItem('token')}`
-        }*/
+        mode:'cors'
     })
     .then((res)=> res.json())
     .then((res)=>res);
@@ -15,17 +12,15 @@ export async function Get (url, dataObject){ // url seria el llamado al Get en e
 export async function Patch (url){ 
     return await fetch( backendurl + url, {
         method:'PATCH',
-        mode:'cors',
-        /*headers:{
-            'Authorization': `Bearer ${localStorage.getItem('token')}`
-        }*/
+        mode:'cors'
     })
     .then((res)=> res.json())
     .then((res)=>res);
 }
-export async function PostU (url,file){ 
+export async function PostU (url,cartelera){ 
     let data = new FormData();
-    data.append('file',file);
+    data.append(cartelera);
+    data.append('file',cartelera.file);
     return await fetch( backendurl + url, {
         method:'Post',
         mode:'cors',
@@ -41,10 +36,7 @@ export async function Delete (url, dataObject){
     const objString = '?' + new URLSearchParams(dataObject).toString(); 
     return await fetch( backendurl + url + objString,{
         method:'DELETE',
-        mode:'cors',
-        /*headers:{
-            'Authorization': `Bearer ${localStorage.getItem('token')}`
-        }*/
+        mode:'cors'
     })
     .then((res)=> res.json())
     .then((res)=>res);

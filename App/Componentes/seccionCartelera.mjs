@@ -4,11 +4,15 @@ const carteleraApp = () => {
     const $secInicio = document.getElementById("sec-inicio");
     const $secCartelera = document.getElementById("sec-cartelera");
     const $secCombo = document.getElementById("sec-combo");
+    const $secAdmin = document.getElementById("sec-admin");
+    const $secCarrusel = document.getElementById("sec-carrusel");
 
     $cartelera.addEventListener("click", () => {
+        $secCarrusel.style.display = "block";
         $secInicio.style.display = "none";
         $secCartelera.style.display = "block";
         $secCombo.style.display = "none";
+        $secAdmin.style.display = "none";
     });
 
     $secCartelera.style.display = "none";

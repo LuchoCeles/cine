@@ -4,6 +4,7 @@ import carruselApp from "./componentes/seccionCarrusel.mjs";
 import inicioApp from "./componentes/seccionInicio.mjs";
 import combosApp from "./componentes/seccionCombos.mjs";
 import carteleraApp from "./componentes/seccionCartelera.mjs";
+import adminApp from "./componentes/seccionAdmin.mjs";
 
 const appFunc = () => {
     CargarInicioApp();
@@ -12,5 +13,6 @@ const appFunc = () => {
     inicioApp();
     combosApp();
     carteleraApp();
+    adminApp();
 }
 export default appFunc;

@@ -4,11 +4,15 @@ const combosApp = () => {
     const $secInicio = document.getElementById("sec-inicio");
     const $secCartelera = document.getElementById("sec-cartelera");
     const $secCombo = document.getElementById("sec-combo");
+    const $secAdmin = document.getElementById("sec-admin");
+    const $secCarrusel = document.getElementById("sec-carrusel");
 
     $combos.addEventListener("click", () => {
+        $secCarrusel.style.display = "block";
         $secInicio.style.display = "none";
         $secCartelera.style.display = "none";
         $secCombo.style.display = "block";
+        $secAdmin.style.display = "none";
     });
 
     $secCombo.style.display = "none";

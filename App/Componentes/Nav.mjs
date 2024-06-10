@@ -6,6 +6,7 @@ const navApp = () => {
     $nav.appendChild(CrearUl(CrearA("id-inicio", "#inicio", "INICIO")));
     $nav.appendChild(CrearUl(CrearA("id-cartelera", "#cartelera", "CARTELERA")));
     $nav.appendChild(CrearUl(CrearA("id-combos", "#combos", "COMBOS")));
+    $nav.appendChild(CrearUl(CrearA("id-admin", "#admin", "ADMIN")));
 
 }
 export default navApp;
