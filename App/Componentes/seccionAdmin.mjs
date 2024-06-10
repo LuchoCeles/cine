@@ -1,4 +1,5 @@
-import { CrearBoton } from "./funciones.mjs";
+import { CrearBoton,CrearInput } from "./funciones.mjs";
+import {postFile} from "../../services/Elements/CarteleraElements.mjs"
 const adminApp = () => {
     const $admin = document.getElementById("id-admin");
     const $secInicio = document.getElementById("sec-inicio");
@@ -16,21 +17,34 @@ const adminApp = () => {
     });
 
     let $divMain = document.createElement("div");
+    $divMain.className = "divmain-admin";
 
-    let $inputTitulo = document.createElement("input");
-    $inputTitulo.type = "text";
-    let $inputDes = document.createElement("input");
-    $inputDes.type = "text";
-    let $inputGenero = document.createElement("input");
-    $inputGenero.type = "text";
-    let $inputDirec = document.createElement("input");
-    $inputDirec.type = "text";
-    let $inputActores = document.createElement("input");
-    $inputActores.type = "text";
+    let $inputTitulo = CrearInput("input-admin","Titulo");
+
+    let $inputDes = CrearInput("input-admin","Descripcion");
+
+    let $inputGenero = CrearInput("input-admin","Genero");
+    
+    let $inputDirec = CrearInput("input-admin","Director");
+    
+    let $inputActores = CrearInput("input-admin","Actores");
+
     let $inputFile = document.createElement("input");
     $inputFile.type = "file";
+
     let $btn = CrearBoton("button", "ENVIAR");
     $btn.type = "submit";
+
+    $btn.addEventListener(()=>{
+        postFile({titulo:$inputTitulo.textContent,
+            descripcion:$inputDes.textContent,
+            genero:$inputGenero.textContent,
+            director:$inputDirec,
+            actores:$inputActores,
+            file:$inputFile
+        });
+    });
+
 
     $divMain.append($inputTitulo);
     $divMain.append($inputDes);

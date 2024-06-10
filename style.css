@@ -80,6 +80,16 @@ ul li {
     text-align: center;
     background-color:  rgb(124, 127, 101);
 }
+/*-------------------------ADMIN--------------------------------*/
+.divmain-admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-admin{
+    max-width: 60vw;
+}
 /*-------------------------CARTELERA--------------------------------*/
 .Titulo-Pelicula{
     color: black;

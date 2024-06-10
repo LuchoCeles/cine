@@ -45,6 +45,13 @@ export const CrearBoton = (NameClass, Content) => {
     return $btn;
 }
 
+export const CrearInput = (NameClass, Content) => {
+    let $input = document.createElement("input");
+    $input.className = NameClass;
+    $input.setAttribute("placeholder", Content);
+    return $input;
+}
+
 export const loadElements = async ($contenedor,  mostrarDetalles = true) => {
     let rsp = await getCartelera();
 
