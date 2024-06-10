@@ -17,21 +17,24 @@ export async function Patch (url){
     .then((res)=> res.json())
     .then((res)=>res);
 }
+
 export async function PostU (url,cartelera){ 
     let data = new FormData();
-    data.append(cartelera);
-    data.append('file',cartelera.file);
+    data.append('descripcion', cartelera.descripcion);
+    data.append('titulo', cartelera.titulo);
+    data.append('actores', cartelera.actores);
+    data.append('genero', cartelera.genero);
+    data.append('director', cartelera.director);
+    data.append('file', cartelera.file);
     return await fetch( backendurl + url, {
         method:'Post',
         mode:'cors',
-        /*headers:{
-            'Authorization': `Bearer ${localStorage.getItem('token')}`
-        }*/
         body:data
     })
     .then((res)=> res.json())
     .then((res)=>res);
 }
+
 export async function Delete (url, dataObject){
     const objString = '?' + new URLSearchParams(dataObject).toString(); 
     return await fetch( backendurl + url + objString,{

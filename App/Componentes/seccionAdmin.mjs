@@ -35,13 +35,13 @@ const adminApp = () => {
     let $btn = CrearBoton("button", "ENVIAR");
     $btn.type = "submit";
 
-    $btn.addEventListener(()=>{
-        postFile({titulo:$inputTitulo.textContent,
-            descripcion:$inputDes.textContent,
-            genero:$inputGenero.textContent,
-            director:$inputDirec,
-            actores:$inputActores,
-            file:$inputFile
+    $btn.addEventListener('click',()=>{
+        postFile({titulo:$inputTitulo.value,
+            descripcion:$inputDes.value,
+            genero:$inputGenero.value,
+            director:$inputDirec.value,
+            actores:$inputActores.value,
+            file:$inputFile.files[0]
         });
     });
 
