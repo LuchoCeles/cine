@@ -26,11 +26,10 @@ export async function PostU (url,cartelera){
     data.append('genero', cartelera.genero);
     data.append('director', cartelera.director);
     data.append('File', cartelera.file);
-    data.append('url', "");
     return await fetch( backendurl + url, {
         method:'POST',
         mode:'cors',
-        body:data
+        body: data
     })
     .then((res)=> res.json())
     .then((res)=>res);
